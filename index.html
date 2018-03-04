@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Bootstrap, from Twitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!-- Le styles -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 60px;
+    }
+    
+    @media (max-width: 979px) {
+      /* Remove any padding from the body */
+      body {
+        padding-top: 0;
+      }
+    }
+	
+	.container-full {
+	  margin: 0 auto;
+	  width: 100%;
+	}
+	.row div {
+	}
+	.tabuada {
+		margin-top : 5px;
+		margin-bottom : 5px;
+		width: 100%;
+	}
+	.tabuada td, th {
+		border: 1px #ccc solid;
+		padding-right: 2px;
+		padding-left: 2px;
+		text-align: center;
+		/*min-width: 20%;*/
+		font-weight: bold;	
+		width: 25px;
+	}
+	.tabuada td.operador, th.operador {
+	    width: 15px;
+	}
+	.tabuada_activa {
+	    background-color: beige;
+	}
+	.tr_desnecessaria {
+	    background-color: gray;
+	}
+	.tr_necessaria {
+	    background-color: beige;
+	}
+	.tr_relacionada {
+	    background-color: beige;
+	}	
+	body {
+		    font-size: 18px;
+	}
+  </style>
+  <link href="style.css" rel="stylesheet" />
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script type='text/javascript' src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <script type='text/javascript' data-require="jquery" data-semver="3.3.1" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript' data-require="bootstrap" data-semver="3.3.7" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type='text/javascript' data-require="angular.js@1.6.8" data-semver="1.6.8" src="http://code.angularjs.org/1.6.8/angular.min.js"></script>
+
+  <script type='text/javascript' src="script.js"></script>
+</head>
+
+<body ng-app="app">
+  <div class="container-fluid">
+
+
+    <div class="row">
+		<tabuada numero="1"></tabuada>
+		<tabuada numero="2"></tabuada>
+		<tabuada numero="3"></tabuada>
+		<tabuada numero="4"></tabuada>
+		<tabuada numero="5"></tabuada>
+		<tabuada numero="6"></tabuada>
+		<tabuada numero="7"></tabuada>
+		<tabuada numero="8"></tabuada>
+		<tabuada numero="9"></tabuada>
+		<tabuada numero="10"></tabuada>
+		<!-- <tabuada numero="11"></tabuada> -->
+		<!-- <tabuada numero="12"></tabuada> -->
+
+    </div>	
+
+  </div>
+  
+ <script type="text/ng-template" id="tabuada.html">
+<!-- begin .container-fluid -->
+
+
+<!-- <div class="col-sm-2 col-md-2"> -->
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+	<table class="tabuada">
+		<tbody>
+			<tr ng-repeat="o in items" class="{{o.c2}}">
+				<td>{{o.c1}}</td>
+				<td class="operador">x</td>
+				<td>{{o.c2}}</td>
+				<td class="operador">=</td>
+				<td>{{o.c3}}</td>
+			<tr>
+		</tbody>
+	</table>
+</div>
+<!-- END: .container-fluid -->		
+</script> 
+  
+</body>
+
+</html>
