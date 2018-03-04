@@ -1,45 +1,7 @@
-(function ($, window, undefined) {
-      
-  $(function () {
-	  
-	$(document).on('click', 'table.tabuada', function(e) {
-		e.preventDefault();
-		var $el = $(this);
-		//$("table.tabuada").removeClass('tabuada_activa');
-		//$el.addClass("tabuada_activa")
-	});	  
-  })
-   
-  
-}(window.jQuery, window))
 
 
 var app = angular.module("app", []);
-app.controller('StudentController', function($scope) {
-    var students=[];
-    var student1={};
-    student1.firstName="John";
-    student1.lastName="David";
-    students.push(student1);
-    var student2={};
-    student2.firstName="Michael";
-    student2.lastName="Jackson";
-    students.push(student2);
-    $scope.students=students;
-});
-app.directive('student', function() {
-    //define the directive object
-    var directive = {};
-    //restrict = E, implies that directive is Element directive
-    directive.restrict = 'E';
-    //element will be replaced by this text/html
-    directive.template = "FirstName: <b>{{student.firstName}}</b> , LastName: <b>{{student.lastName}}</b>";
-    var linkFunction = function($scope, element, attributes) {
-        element.css("background-color", "#00ff00");
-    }
-    directive.link=linkFunction;
-    return directive;
-});
+
 
 app
 	.directive('tabuada', function(){
