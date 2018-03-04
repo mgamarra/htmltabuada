@@ -71,7 +71,7 @@ app
 				for ( let i = numero; i < trs.length ; i++ ) {
 					$(trs[i]).addClass("tr_necessaria");
 				}
-				console.log(scope.numero);
+				//console.log(scope.numero);
 			});			
 		}
 		, controller: function($scope, $timeout) {
